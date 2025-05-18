@@ -1,8 +1,8 @@
 {
-  "short_name": "PayCircle",
-  "name": "PayCircle - Group Split Expense App",
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
-}
+    "short_name": "SplitApp",
+    "name": "Group Expense Tracker",
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+  }

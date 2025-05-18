@@ -16,7 +16,7 @@ const About = () => {
     <img src="https://github.com/tuzup/SplitApp/blob/master/client/public/static/logo.png?raw=true" alt="Logo" width="80" height="80"/>
   </a>
 
-  <h2 align="center">PayCircle</h2>
+  <h2 align="center">SplitApp</h2>
 
   <p align="center">
     Build with the MERN stack (MongoDB, Express, React and NodeJS).
@@ -24,13 +24,13 @@ const About = () => {
     <br/>
     <Copyright/>
     <br/>
-    <a href="https://github.com/tuzup/PayCircle/issues">Report Bug</a>
+    <a href="https://github.com/tuzup/SplitApp/issues">Report Bug</a>
     &nbsp;&nbsp;&nbsp;
-    <a href="https://github.com/tuzup/PayCircle/issues">Request Feature</a>
+    <a href="https://github.com/tuzup/SplitApp/issues">Request Feature</a>
   </p>
 </div>
 <br/>
-<center><img src="https://raw.githubusercontent.com/tuzup/PayCircle/master/Screenshots/dashboard-main-transparent.png" alt="PayCircle" width={'80%'}/></center>
+<center><img src="https://raw.githubusercontent.com/tuzup/SplitApp/master/Screenshots/dashboard-main-transparent.png" alt="splitapp" width={'80%'}/></center>
 <Typography variant="h5">
 MERN Stack Group Expense Splitting Application
 </Typography>
@@ -51,9 +51,9 @@ MERN Stack Group Expense Splitting Application
 <br/>
 <h2 id="introduction">Introduction</h2>
 <br/>
-<p>This is a side project I&#39;ve been working on. A full stack expense spliting app - splitwise clone made using the MERN stack (MongoDB, Express, React &amp; Nodejs), specially designed to split group expense between friends, but can be used for almost any type of business need. With this application, you can add your expense details and get an whole expense analytics feature - Group Balance, Monthly amount spend, Catagory wise expense spending graph etc... Jump right off the <a href="https://split-app00.herokuapp.com/">Live App</a> and start adding your expenses or download the entire <a href="https://github.com/tuzup/PayCircle/">Source code</a> and run it on your server. This project is something I&#39;ve been working on in my free time so I cannot be sure that everything will work out correctly. But I&#39;ll appreciate you if can report any issue.</p>
+<p>This is a side project I&#39;ve been working on. A full stack expense spliting app - splitwise clone made using the MERN stack (MongoDB, Express, React &amp; Nodejs), specially designed to split group expense between friends, but can be used for almost any type of business need. With this application, you can add your expense details and get an whole expense analytics feature - Group Balance, Monthly amount spend, Catagory wise expense spending graph etc... Jump right off the <a href="https://split-app00.herokuapp.com/">Live App</a> and start adding your expenses or download the entire <a href="https://github.com/tuzup/SplitApp/">Source code</a> and run it on your server. This project is something I&#39;ve been working on in my free time so I cannot be sure that everything will work out correctly. But I&#39;ll appreciate you if can report any issue.</p>
 <br/>
-<center><img src="https://raw.githubusercontent.com/tuzup/PayCircle/master/Screenshots/combined-screenshot.png" alt="Features" width={'80%'}/></center>
+<center><img src="https://raw.githubusercontent.com/tuzup/SplitApp/master/Screenshots/combined-screenshot.png" alt="Features" width={'80%'}/></center>
 <br/>
 <h2 id="key-features">Key Features</h2>
 <br/>

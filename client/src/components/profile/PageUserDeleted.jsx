@@ -27,7 +27,7 @@ export default function PageUserDeleted() {
           </Typography>
 
           <Typography sx={{ color: 'text.secondary' }}>
-            Thank you for using PayCircle! <br/>
+            Thank you for using SplitApp! <br/>
           </Typography>
           </Box>
           <Box

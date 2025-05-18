@@ -24,6 +24,11 @@ const MENU_OPTIONS = [
     icon: 'eva:person-fill',
     linkTo: configData.USER_PROFILE_URL,
   },
+  {
+    label: 'Settings',
+    icon: 'eva:settings-2-fill',
+    linkTo: '#',
+  },
 ];
 
 // ----------------------------------------------------------------------

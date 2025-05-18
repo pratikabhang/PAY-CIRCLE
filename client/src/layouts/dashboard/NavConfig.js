@@ -1,4 +1,6 @@
+// component
 import Iconify from '../../components/Iconify';
+
 import configData from '../../config.json'
 
 // ----------------------------------------------------------------------
@@ -26,12 +28,6 @@ const navConfig = [
     path: configData.ABOUT_URL,
     icon: getIcon('fluent:info-12-filled'),
   },
-{
-  title: 'UPI ID',
-  path: configData.UPI_ID_URL,
-  icon: getIcon('mdi:credit-card-wireless'),
-}
-
 ];
 
 export default navConfig;
