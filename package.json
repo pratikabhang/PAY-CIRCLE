@@ -1,13 +1,13 @@
 {
   "name": "splitapp",
   "version": "1.0.0",
-  "description": "This is a group money spliting app made with MERN stack ",
+  "description": "This is a group money splitting app made with MERN stack",
   "main": "app.js",
   "scripts": {
     "test": "npx nodemon app.js",
     "start": "node app.js",
-    "heroku-postbuild": "cd client && npm install && npm run build",
-    "dev": "concurrently \"npm test\" \"cd client && npm start\" "
+    "build": "cd client && npm install && npm run build",
+    "dev": "concurrently \"npm test\" \"cd client && npm start\""
   },
   "keywords": [
     "SplitWise"
@@ -25,7 +25,8 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.3.8",
+    "mongodb": "^6.16.0",
+    "mongoose": "^6.13.8",
     "morgan": "~1.9.1",
     "winston": "^3.7.2"
   },
