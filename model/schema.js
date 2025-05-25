@@ -1,27 +1,30 @@
-var mongoose = require('mongoose')
-var logger = require('../helper/logger')
+const mongoose = require('mongoose');
+const logger = require('../helper/logger');
 
-mongoose.connect(process.env.MONGODB_URI, 
-//     {
-//     maxPoolSize: 50,
-//     wtimeoutMS: 2500,
-//     useNewUrlParser: true
-// }
-).then(() => {
-    logger.info(`DB Connection Established`)
-    console.log("DB Connected")
-}).catch(err => {
-    logger.error(`DB Connection Fail | ${err.stack}`)
-    console.log(err)
+// MongoDB Connection
+mongoose.connect(process.env.MONGODB_URI, {
+    maxPoolSize: 50,
+    wtimeoutMS: 2500,
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 })
+.then(() => {
+    logger.info('✅ DB Connection Established');
+    console.log('✅ DB Connected');
+})
+.catch(err => {
+    logger.error(`❌ DB Connection Failed | ${err.stack}`);
+    console.error('❌ DB Connection Failed:', err);
+});
 
-const User = new mongoose.Schema({
+// User Schema
+const UserSchema = new mongoose.Schema({
     firstName: {
         type: String,
         required: true
     },
     lastName: {
-        type: String,
+        type: String
     },
     emailId: {
         type: String,
@@ -32,9 +35,10 @@ const User = new mongoose.Schema({
         type: String,
         required: true
     }
-})
+}, { timestamps: true });
 
-const Group = new mongoose.Schema({
+// Group Schema
+const GroupSchema = new mongoose.Schema({
     groupName: {
         type: String,
         required: true
@@ -44,29 +48,31 @@ const Group = new mongoose.Schema({
     },
     groupCurrency: {
         type: String,
-        default: "INR"
+        default: 'INR'
     },
     groupOwner: {
         type: String,
         required: true
     },
     groupMembers: {
-        type: Array,
+        type: [String],
         required: true
     },
     groupCategory: {
         type: String,
-        default: "Others"
-    },groupTotal: {
-        type: Number, 
+        default: 'Others'
+    },
+    groupTotal: {
+        type: Number,
         default: 0
     },
     split: {
         type: Array
     }
-})
+}, { timestamps: true });
 
-const Expense = new mongoose.Schema({
+// Expense Schema
+const ExpenseSchema = new mongoose.Schema({
     groupId: {
         type: String,
         required: true
@@ -76,21 +82,21 @@ const Expense = new mongoose.Schema({
         required: true
     },
     expenseDescription: {
-        type: String,
+        type: String
     },
     expenseAmount: {
         type: Number,
         required: true
     },
-    expenseCategory:{
+    expenseCategory: {
         type: String,
-        default: "Others"
+        default: 'Others'
     },
-    expenseCurrency:{
+    expenseCurrency: {
         type: String,
-        default: "INR"
+        default: 'INR'
     },
-    expenseDate:{
+    expenseDate: {
         type: Date,
         default: Date.now
     },
@@ -99,7 +105,7 @@ const Expense = new mongoose.Schema({
         required: true
     },
     expenseMembers: {
-        type: Array,
+        type: [String],
         required: true
     },
     expensePerMember: {
@@ -107,35 +113,39 @@ const Expense = new mongoose.Schema({
         required: true
     },
     expenseType: {
-        type: String, 
-        default: "Cash"
+        type: String,
+        default: 'Cash'
     }
-})
+}, { timestamps: true });
 
-const Settlement = new mongoose.Schema({
-    groupId:{
+// Settlement Schema
+const SettlementSchema = new mongoose.Schema({
+    groupId: {
         type: String,
         required: true
     },
-    settleTo:{
-        type:String,
+    settleTo: {
+        type: String,
         required: true
     },
-    settleFrom:{
-        type:String,
-        required: true
-    }, 
-    settleDate:{
-        type:String,
+    settleFrom: {
+        type: String,
         required: true
     },
-    settleAmount:{
-        type:Number, 
+    settleDate: {
+        type: String,
+        required: true
+    },
+    settleAmount: {
+        type: Number,
         required: true
     }
-})
+}, { timestamps: true });
 
-module.exports.Expense = mongoose.model('expense', Expense)
-module.exports.User = mongoose.model('user', User)
-module.exports.Group = mongoose.model('group', Group)
-module.exports.Settlement = mongoose.model('settlement', Settlement)
+// Exporting Models
+module.exports = {
+    User: mongoose.model('User', UserSchema),
+    Group: mongoose.model('Group', GroupSchema),
+    Expense: mongoose.model('Expense', ExpenseSchema),
+    Settlement: mongoose.model('Settlement', SettlementSchema)
+};
