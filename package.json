@@ -7,7 +7,7 @@
     "test": "npx nodemon app.js",
     "start": "node app.js",
     "dev": "concurrently \"npm test\" \"cd client && npm start\"",
-    "build": "cd client && npm install && npm run build"
+    "build": "cd client && npm install"
   },
   "keywords": [
     "SplitWise"
